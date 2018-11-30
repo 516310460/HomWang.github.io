@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 
 /*
-	Editorial by HTML5 UP
+	王弘的技术博客
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -175,9 +175,9 @@ input, select, textarea {
 		font-style: italic;
 	}
 
-	p {
+	/* p {
 		margin: 0 0 2em 0;
-	}
+	} */
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #3d4449;
@@ -1800,7 +1800,7 @@ input, select, textarea {
 		border-bottom: solid 3px #f56a6a;
 		display: inline-block;
 		margin: 0 0 2em 0;
-		padding: 0 0.75em 0.5em 0;
+		/* padding: 0 0.75em 0.5em 0; */
 	}
 
 	header.main > :last-child {
@@ -2097,7 +2097,7 @@ input, select, textarea {
 			}
 
 	a.image {
-		overflow: hidden;
+		/* overflow: hidden; */
 	}
 
 		a.image img {
@@ -2585,6 +2585,8 @@ input, select, textarea {
 			.mini-posts article .image img {
 				display: block;
 				width: 100%;
+				border-radius: 100%;
+				width: 45%;
 			}
 
 		.mini-posts article:first-child {
@@ -3111,7 +3113,7 @@ input, select, textarea {
 			#sidebar > .inner > * {
 				border-bottom: solid 2px rgba(210, 215, 217, 0.75);
 				margin: 0 0 3.5em 0;
-				padding: 0 0 3.5em 0;
+				/* padding: 0 0 3.5em 0; */
 			}
 
 				#sidebar > .inner > * > :last-child {
@@ -3242,7 +3244,7 @@ input, select, textarea {
 					#sidebar > .inner:after {
 						content: '';
 						display: block;
-						height: 4em;
+						/* height: 4em; */
 						width: 100%;
 					}
 
