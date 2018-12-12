@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/',
+    base: '/516310460.github.io/',
     locales: {
         '/': {
             lang: 'en-us',
@@ -8,7 +8,7 @@ module.exports = {
         }
     },
     themeConfig: {
-        repo: 'ezypeeze/nuxt-neo',
+        repo: '516310460/516310460.github.io',
         locales: {
             '/': {
                 nav: [
