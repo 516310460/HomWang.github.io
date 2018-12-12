@@ -1,5 +1,5 @@
 module.exports = {
-	base: '/quist-ui/',
+	base: '/516310460.github.io/',
 	title: 'Quist-UI',
 	description: '快应用UI组件库，简洁，易用，高效',
 	head: [
@@ -11,7 +11,7 @@ module.exports = {
     nav: [
       { text: '指南', link: '/' },
       { text: 'Changelog', link: '../guide/CHANGELOG.md' },
-      { text: 'GitHub', link: 'https://github.com/JDsecretFE/quist-ui' },
+      { text: 'GitHub', link: 'https://516310460.github.io' },
 		],
 		sidebar: [
 			{
