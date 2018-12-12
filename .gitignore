@@ -1,9 +1,7 @@
 node_modules
-gui
-build
-npm-debug.log
-.history
-.DS_Store
 .idea
-.vscode
-babel.config.js
+*.log
+.nuxt
+dist
+.nyc_output
+coverage

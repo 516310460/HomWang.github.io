@@ -1,61 +1,97 @@
 {
-  "name": "quist-ui",
-  "title": "Quist-UI",
-  "version": "1.1.2",
-  "description": "基于快应用的多功能、富交互、轻量级的UI 组件库",
-  "subversion": {
-    "toolkit": "0.0.38"
-  },
+  "name": "nuxt-neo",
+  "version": "2.0.2",
+  "description": "A nuxt.js module that implements a universal api layer, same-way compatible between server and client side.",
+  "keywords": [
+    "nuxt",
+    "vue",
+    "node",
+    "javascript",
+    "module",
+    "api",
+    "middleware",
+    "service",
+    "universal",
+    "neo",
+    "controller",
+    "action",
+    "asyncdata",
+    "fetch"
+  ],
+  "homepage": "https://ezypeeze.github.io/nuxt-neo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JDsecretFE/quist-ui.git"
+    "url": "https://github.com/516310460/516310460.github.io"
   },
-  "author": "secretFE",
-  "homepage": "https://jdsecretfe.github.io/quist-ui/",
-  "keywords": [
-    "Quist-UI",
-    "ui-components",
-    "component",
-    "components",
-    "ui",
-    "快应用",
-    "快应用UI组件库"
-  ],
   "bugs": {
-    "url": "https://github.com/JDsecretFE/quist-ui/issues"
+    "url": "https://github.com/516310460/516310460.github.io/issues"
   },
+  "main": "lib/module.js",
   "scripts": {
-    "server": "hap server",
-    "postinstall": "hap postinstall",
-    "debug": "hap debug",
-    "build": "hap build",
-    "release": "hap release",
-    "watch": "hap watch",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "test": "ava",
+    "lint": "eslint --ext .js lib",
+    "release:patch": "sure && standard-version --no-verify --release-as patch && git push --tags",
+    "release:minor": "sure && standard-version --no-verify --release-as minor && git push --tags",
+    "release:major": "sure && standard-version --no-verify --release-as major && git push --tags"
   },
+  "pre-commit": [
+    "lint"
+  ],
+  "author": "Pedro Pereira <pedromdspereira.93@gmail.com>",
+  "contributors": [
+    {
+      "name": "Pedro Pereira <pedromdspereira.93@gmail.com>"
+    }
+  ],
   "license": "MIT",
-  "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-syntax-jsx": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "babel-loader": "^8.0.0",
-    "css-what": "^2.1.0",
-    "hap-toolkit": "0.0.38",
-    "koa": "^2.3.0",
-    "koa-body": "^2.5.0",
-    "koa-router": "^7.2.1",
-    "koa-send": "^4.1.1",
-    "koa-static": "^4.0.1",
-    "socket.io": "^2.1.0",
-    "vuepress": "^0.14.4",
-    "webpack": "^4.26.1",
-    "webpack-cli": "^3.1.0"
-  },
   "dependencies": {
-    "less": "^3.9.0",
-    "less-loader": "^4.1.0"
+    "body-parser": "^1.18.3",
+    "config": "^1.30.0",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "axios": "^0.18.0",
+    "babel-eslint": "^8.2.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "browser-env": "^3.2.5",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-ava": "^4.5.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "jsdom": "^11.10.0",
+    "lodash": "^4.17.10",
+    "nuxt": "^1.4.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.12.1",
+    "querystring": "^0.2.0",
+    "require-extension-hooks": "^0.3.2",
+    "require-extension-hooks-babel": "^0.1.1",
+    "require-extension-hooks-vue": "^1.0.0",
+    "standard-version": "^4.3.0",
+    "sure": "^0.0.3",
+    "vuepress": "^0.8.4"
+  },
+  "ava": {
+    "require": [
+      "./tests/setup/babel.js",
+      "./tests/setup/global.js"
+    ],
+    "concurrency": 1
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   }
 }

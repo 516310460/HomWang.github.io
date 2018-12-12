@@ -1,81 +1,29 @@
-# Quist-UI
+# nuxt-neo
+[![Build Status](https://travis-ci.org/516310460/516310460.github.io.svg?branch=master)](https://travis-ci.org/516310460/516310460.github.io)
+[![Current NPM Version](https://badge.fury.io/js/nuxt-neo.svg)](https://badge.fury.io/js/nuxt-neo)
+[![Dependencies](https://david-dm.org/516310460/516310460.github.io.svg)](https://david-dm.org/516310460/516310460.github.io.svg)
+[![Codecov](https://codecov.io/gh/516310460/516310460.github.io/branch/master/graph/badge.svg)](https://codecov.io/gh/516310460/516310460.github.io)
+[![Monthly Downloads](https://img.shields.io/npm/dm/nuxt-neo.svg)](https://img.shields.io/npm/dm/nuxt-neo.svg)
+[![Known Vulnerabilities](https://snyk.io/test/github/516310460/516310460.github.io/badge.svg)](https://snyk.io/test/github/516310460/516310460.github.io)
 
-快应用UI组件库，简洁，易用，高效
+> This module allows you to make a middleware API between the browser, your server and other private API's. Opinated, yet flexible, you can take care of your data flow in the same way, no matter if you are executing code on server or client side.
 
-### 在线体验  
+### Documentation ###
+Check full documentation [here](https://ezypeeze.github.io/nuxt-neo).
 
-通过下面的二维码，可以在手机中体验 Quist-UI (请使用快应用调试器扫码)：
+### Description ###
+One of the things that Nuxt.js doesn't bring out-of-the-box is middleware api support
+(it can be simply added thanks to its flexibility).
+I created this module so you can create your API inside nuxt.js easily, based on a controllers and actions approach.
 
-![体验二维码](https://camo.githubusercontent.com/1637de016a1e70707c8715716c496aa4cd3383e4/687474703a2f2f7066726734717130792e626b742e636c6f7564646e2e636f6d2f35626166326161344e30636363383739372e706e67)
+### Features ###
+- Auto-generate routes based on the folder/file tree your api folder.
+- Easy middleware injection (for all API or controller/action specific)
+- One single way to access your API.
+- Global HTTP Errors for better error handling
 
-
-### 安装  
-`$ npm install quist-ui -D` 或 `$ yarn add quist-ui --dev`
-
-
-### 配置
-> 如果是在已有项目安装，创建一个webpack.config.js文件(在根目录下，创建一个config文件夹，然后把此文件放入config文件夹下)，并添加如下配置
-
-```
-var path = require('path')
-module.exports = {
-  postHook: function(webpackConf, options){
-    webpackConf.resolve.alias = Object.assign(webpackConf.resolve.alias || {}, {
-      '@quist-ui': path.join(process.cwd(), 'node_modules/quist-ui/components')
-    })
-  }
-}
-```
-
-
-### 本地体验  
-> 此操作适用于在没有项目的基础上进行安装
-1. Clone Quist-UI 仓库到本地
-2. 安装依赖 `$ npm install`
-3. 在 quist-ui 根目录下执行 `$ npm run watch`
-4. 在 quist-ui 根目录下执行 `$ npm run server`
-5. Done~
-
-
-### 文档  
-
-- [Quist-UI 组件库文档](https://jdsecretfe.github.io/quist-ui)
-- [Quist-UI 源码地址](https://github.com/JDsecretFE/quist-ui)
-
-
-### 组件列表  
-
-- 基础组件
-    - [进度条 progress](https://jdsecretfe.github.io/quist-ui/guide/progress.html)
-    - [步骤条 steps](https://jdsecretfe.github.io/quist-ui/guide/steps.html)
-- 表单组件
-    - [按钮 button](https://jdsecretfe.github.io/quist-ui/guide/button.html)
-    - [多选框 checkbox](https://jdsecretfe.github.io/quist-ui/guide/checkbox.html)
-    - [单选框 radio](https://jdsecretfe.github.io/quist-ui/guide/radio.html)
-    - [开关 switch](https://jdsecretfe.github.io/quist-ui/guide/switch.html)
-    - [输入框 input](https://jdsecretfe.github.io/quist-ui/guide/input.html)
-    - [评分 rate](https://jdsecretfe.github.io/quist-ui/guide/rate.html)
-    - [滑动输入条 slider](https://jdsecretfe.github.io/quist-ui/guide/slider.html)
-- 功能组件
-    - [计数器 counter](https://jdsecretfe.github.io/quist-ui/guide/counter.html)
-    - [加载 loading](https://jdsecretfe.github.io/quist-ui/guide/loading.html)
-    - [轮播图 swiper](https://jdsecretfe.github.io/quist-ui/guide/swiper.html)
-    - [列表索引 indexlist](https://jdsecretfe.github.io/quist-ui/guide/indexlist.html)
-    - [选择器 picker](https://jdsecretfe.github.io/quist-ui/guide/picker.html)
-    - [滑动输入条 slider](https://jdsecretfe.github.io/quist-ui/guide/slider.html)
-- 提示反馈
-    - [抽屉 drawer](https://jdsecretfe.github.io/quist-ui/guide/drawer.html)
-    - [提示 toast](https://jdsecretfe.github.io/quist-ui/guide/toast.html)
-    - [对话框 dialog](https://jdsecretfe.github.io/quist-ui/guide/dialog.html)
-
-
-### 反馈沟通
-
-请扫码进入微信群，此群可快速及时地解答问题。
-
-![微信沟通群二维码](https://camo.githubusercontent.com/fd80f3e7bb8a3b45104da408bfe7261dec3e09fe/68747470733a2f2f696d672d626c6f672e6373646e696d672e636e2f32303138313231303133353834323434332e6a706567)
-
-
-### 开源协议  
-
-本项目基于 [MIT](http://opensource.org/licenses/MIT) License，请自由的享受、参与开源。
+### Release Notes ###
+Check all release notes [here](https://github.com/516310460/516310460.github.io/blob/master/CHANGELOG.md).
+ 
+### License ###
+MIT
