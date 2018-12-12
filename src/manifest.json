@@ -1,0 +1,103 @@
+{
+  "package": "com.quist-ui.demo",
+  "name": "quist-ui",
+  "versionName": "0.0.2",
+  "versionCode": "2",
+  "minPlatformVersion": "1010",
+  "icon": "/Common/quist-logo.png",
+  "features": [{
+      "name": "system.prompt"
+    },
+    {
+      "name": "system.router"
+    },
+    {
+      "name": "system.shortcut"
+    },
+    {
+      "name": "system.device"
+    }
+  ],
+  "permissions": [{
+    "origin": "*"
+  }],
+  "config": {
+    "logLevel": "debug",
+    "designWidth": 750
+  },
+  "router": {
+    "entry": "Home",
+    "pages": {
+      "Home": {
+        "component": "index"
+      },
+      "Button": {
+        "component": "index"
+      },
+      "Toast": {
+        "component": "index"
+      },
+      "Swiper": {
+        "component": "index"
+      },
+      "Checkbox": {
+        "component": "index"
+      },
+      "Radio": {
+        "component": "index"
+      },
+      "Switch": {
+        "component": "index"
+      },
+      "Search": {
+        "component": "index"
+      },
+      "Counter": {
+        "component": "index"
+      },
+      "Dialog": {
+        "component": "index"
+      },
+      "Drawer": {
+        "component": "index"
+      },
+      "Loading": {
+        "component": "index"
+      },
+      "Indexlist": {
+        "component": "index"
+      },
+      "Picker": {
+        "component": "index"
+      },
+      "Progress": {
+        "component": "index"
+      },
+      "Tabs": {
+        "component": "index"
+      },
+      "Rate": {
+        "component": "index"
+      },
+      "Steps": {
+        "component": "index"
+      },
+      "Input": {
+        "component": "index"
+      },
+      "Slider": {
+        "component": "index"
+      }
+    }
+  },
+  "display": {
+    "titleBarBackgroundColor": "#ffffff",
+    "titleBarTextColor": "#000000",
+    "menu": false,
+    "pages": {
+      "Home": {
+        "titleBarText": "QuistUI组件库"
+      }
+    }
+  }
+}

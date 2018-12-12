@@ -1,0 +1,122 @@
+<import name='quist-radio' src='@quist-ui/quist-radio/index'></import>
+
+<template>
+  <div class="radio-demo">
+    <div class="demo-block">
+      <div class="item-box">
+        <text class="item-txt" @click="evtEmit">选中的值：{{value1}}</text>
+        <quist-radio options="{{data1}}" value="{{value1}}" @on-change="callback1" wrapper-style="{{wrapperStyle}}" inner-style="{{innerStyle}}"></quist-radio>
+      </div>
+    </div>
+    <div class="demo-block">
+      <div class="item-box">
+        <text class="item-txt">自定义样式</text>
+        <quist-radio value='apple' options="{{data}}" @on-change="callback" label-style="{{labelStyle1}}" common></quist-radio>
+      </div>
+    </div>
+</template>
+
+<style>
+  .radio-demo {
+    flex: 1;
+    flex-direction: column;
+    background-color: #f5f5f5;
+  }
+
+  .demo-block {
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .item-box {
+    margin: 20px;
+    flex-direction: column;
+  }
+
+  .item-txt {
+    color: #333333;
+    font-size: 32px;
+  }
+</style>
+
+<script>
+  export default {
+    data: {
+      value: '',
+      value1: '',
+      value2: '',
+      data: [
+        {
+          disabled: true,
+          label: '苹果',
+          value: 'apple'
+        },
+        {
+          disabled: false,
+          label: '香蕉',
+          value: 'banana'
+        },
+        {
+          disabled: false,
+          label: '芒果',
+          value: 'mango'
+        }
+      ],
+      data1: [
+        {
+          label: '男',
+          value: 'man'
+        },
+        {
+          label: '女',
+          value: 'woman'
+        }
+      ],
+      labelStyle: {
+        color: 'red'
+      },
+      wrapperStyle: {
+        width: '40px',
+        height: '40px',
+        borderRadius: 0
+      },
+      innerStyle: {
+        width: '24px',
+        height: '24px',
+        borderRadius: 0
+      },
+      labelStyle1: {
+        color: '#1890ff'
+      },
+      wrapperStyle1: {
+        width: '60px',
+        height: '60px',
+        borderRadius: 0
+      },
+      innerStyle1: {
+        width: '44px',
+        height: '44px',
+        borderRadius: 0
+      }
+    },
+    onInit() {
+      this.value = this.data[0].value
+      this.$page.setTitleBar({ text: 'Radio' })
+    },
+    evtEmit() {
+      this.value1 = "2"
+    },
+    callback(data) {
+      this.value = data.detail.values
+    },
+    callback1(data) {
+      this.value1 = data.detail.values
+    },
+    callback2(data) {
+      this.value2 = data.detail.values
+    }
+  }
+</script>

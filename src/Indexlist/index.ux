@@ -1,0 +1,34 @@
+<import name='quist-indexlist' src='@quist-ui/quist-indexlist/index'></import>
+
+<template>
+  <div class="badge-demo">
+    <quist-indexlist data-source="{{dataSource}}" title="当前定位城市" current="{{current}}" hot-item="{{hotCity}}" @on-click="onClick" type="cityName" hot-title="热门城市"></quist-indexlist>
+  </div>
+</template>
+
+<style>
+  .badge-demo {
+    flex: 1;
+    flex-direction: column;
+    background-color: #ffffff;
+  }
+</style>
+
+<script>
+  import { city, hotCity, current } from './data'
+  export default {
+    data: {
+      dataSource: city,
+      hotCity,
+      current
+    },
+    onInit() {
+      this.$page.setTitleBar({
+        text: 'Indexlist'
+      })
+    },
+    onClick(data) {
+      console.log('data', data.detail);
+    }
+  }
+</script>

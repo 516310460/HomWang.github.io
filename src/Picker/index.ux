@@ -1,0 +1,145 @@
+<import name="quist-picker" src="@quist-ui/quist-picker/index"></import>
+
+<template>
+  <div class="picker-demo">
+    <div class="picker-title">
+      <text class="title-text">基本</text>
+    </div>
+    <div class="item-li" onclick="showpicker(1)">
+      <text class="item-li-detail">一列</text>
+      <div class="select-area">
+        <text class="item-name">{{selectTxt1}}</text>
+        <image class="item_arrow_img" src="/Common/img/arrow_right.webp" />
+      </div>
+    </div>
+    <div class="item-li" onclick="showpicker(2)">
+      <text class="item-li-detail">两列</text>
+      <div class="select-area">
+        <text class="item-name">{{selectTxt2}}</text>
+        <image class="item_arrow_img" src="/Common/img/arrow_right.webp" />
+      </div>
+    </div>
+    <div class="item-li" onclick="showpicker(3)">
+      <text class="item-li-detail">三列</text>
+      <div class="select-area">
+        <text class="item-name">{{selectTxt3}}</text>
+        <image class="item_arrow_img" src="/Common/img/arrow_right.webp" />
+      </div>
+    </div>
+    
+    <div class="item-li" onclick="showpicker(4)">
+      <text class="item-li-detail">自定义样式</text>
+      <div class="select-area">
+        <text class="item-name">{{selectTxt4}}</text>
+        <image class="item_arrow_img" src="/Common/img/arrow_right.webp" />
+      </div>
+    </div>
+    
+    <quist-picker visible="{{pickerVisible1}}" @on-close="close(1)" list="{{list1}}" @on-select="select1()" mask-closable="{{false}}" ok-text="ok" cancel-text="cancel"></quist-picker>
+    <quist-picker visible="{{pickerVisible2}}" @on-close="close(2)" list="{{list2}}" @on-select="select2()"></quist-picker>
+    <quist-picker visible="{{pickerVisible3}}" @on-close="close(3)" list="{{list3}}" @on-select="select3()"></quist-picker>
+    <quist-picker visible="{{pickerVisible4}}" title-font-size="{{28}}" cancel-color="#666666" confirm-color="#87d068" item-color="#333333" item-select-color="#87d068" item-font-size="{{28}}" @on-close="close(4)" list="{{list1}}" @on-select="select4()" mask-closable="{{false}}" ok-text="ok" cancel-text="cancel"></quist-picker>
+  </div>
+</template>
+
+<style>
+  .picker-demo {
+    flex-direction: column;
+    background-color: #f5f5f5;
+  }
+
+  .picker-title {
+    margin: 30px;
+  }
+
+  .title-text {
+    font-size: 32px;
+    color: #333333;
+  }
+
+  .item-li {
+    background-color: #ffffff;
+    flex-direction: row;
+    border-color: #dddddd;
+    border-bottom-width: 1px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  .item-li-detail {
+    color: #333333;
+    flex: 1;
+    font-size: 28px;
+    margin-left: 30px;
+  }
+
+  .item_arrow_img {
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+    margin-right: 30px;
+    resize-mode: contain;
+  }
+
+  .select-area {
+    align-items: center;
+  }
+
+  .item-name {
+    color: #999999;
+  }
+</style>
+
+<script>
+  export default {
+    private: {
+      pickerVisible1: false,
+      pickerVisible2: false,
+      pickerVisible3: false,
+      pickerVisible4: false,
+      selectTxt1: '',
+      selectTxt2: '',
+      selectTxt3: '',
+      selectTxt4: '',
+      list1: ['iphone', '华为', '小米', '三星', '魅族', '锤子', 'oppo'],
+      list2: [
+        ['iphone', '华为', '小米', '三星', '魅族', '锤子', 'oppo'],
+        ['iphone6', 'iphone6S', 'iphone6PLUS', 'iphone7', 'iphone7PLUS', 'iphoneX', 'iphoneXS']
+      ],
+      list3: [
+        ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+        ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+        ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31']
+      ]
+    },
+    onInit() {
+      this.$page.setTitleBar({
+        text: 'Picker'
+      })
+    },
+    showpicker(i) {
+      this[`pickerVisible${i}`] = true
+    },
+    close(i) {
+      this[`pickerVisible${i}`] = false
+    },
+    select1(e) {
+      console.log('一列所选的值：', e.detail[0])
+      this.selectTxt1 = e.detail[0].content
+    },
+    select2(e) {
+      console.log('两列所选的值：', e.detail[0], e.detail[1])
+      this.selectTxt2 = e.detail[0].content + ' ' + e.detail[1].content
+    },
+    select3(e) {
+      console.log('三列所选的值：', e.detail[0], e.detail[1], e.detail[2])
+      this.selectTxt3 = e.detail[0].content + ' ' + e.detail[1].content + ' ' + e.detail[2].content
+    },
+    select4(e) {
+      console.log('一列所选的值：', e.detail[0])
+      this.selectTxt4 = e.detail[0].content
+    }
+  }
+</script>

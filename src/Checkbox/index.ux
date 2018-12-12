@@ -1,0 +1,106 @@
+<import name='quist-checkbox' src='@quist-ui/quist-checkbox/index'></import>
+
+<template>
+  <div class="checkbox-demo">
+    <div class="demo-block">
+      <div class="item-box">
+        <text class="item-txt">CheckboxList - 选中的值：{{value1}}</text>
+        <quist-checkbox values="{{data1.values}}" options="{{data1.options}}" @on-change="callback"></quist-checkbox>
+      </div>
+    </div>
+    <div class="demo-block">
+      <div class="item-box">
+        <text class="item-txt" @click="evtEmit">自定义样式</text>
+        <quist-checkbox values="{{data2.values}}" options="{{data2.options}}" checked-color='#87d068' checked-border-color='#87d068' id="childVm" is-right wrapper-style="{{wrapperStyle}}"></quist-checkbox>
+      </div>
+    </div>
+    <div>
+</template>
+
+<style>
+  .checkbox-demo {
+    flex: 1;
+    flex-direction: column;
+    background-color: #f5f5f5;
+  }
+
+  .demo-block {
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .item-box {
+    margin: 20px;
+    flex-direction: column;
+  }
+
+  .item-txt {
+    color: #333333;
+    font-size: 32px;
+  }
+</style>
+
+<script>
+  export default {
+    data: {
+      value1: [],
+      data1: {
+        values: ['apple', 'banana'],
+        options: [
+          {
+            disabled: true,
+            label: '苹果',
+            value: 'apple'
+          },
+          {
+            disabled: false,
+            label: '梨',
+            value: 'pear'
+          },
+          {
+            label: '香蕉',
+            value: 'banana'
+          },
+          {
+            disabled: true,
+            label: '橘子',
+            value: 'orange'
+          }
+        ]
+      },
+      data2: {
+        values: [2],
+        options: [{
+          label: '蓝色',
+          value: 1
+        },
+        {
+          label: '绿色',
+          value: 2
+        },
+        {
+          label: '黄色',
+          value: 3
+        }],
+      },
+      wrapperStyle: {
+        width: '40px',
+        height: '40px',
+        borderRadius: 0,
+      }
+    },
+    onInit() {
+      this.$page.setTitleBar({ text: 'Checkbox' })
+    },
+    evtEmit() {
+      // 父组件向指定子组件触发事件
+      this.$vm('childVm').$broadcast('evtCast', { params: 1 })
+    },
+    callback(data) {
+      this.value1 = [...data.detail.values]
+    }
+  }
+</script>

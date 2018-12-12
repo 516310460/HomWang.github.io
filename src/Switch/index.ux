@@ -1,0 +1,94 @@
+<import name='quist-switch' src='@quist-ui/quist-switch/index'></import>
+
+<template>
+  <div class="switch-demo">
+    <div class="demo-block">
+      <div class="item-box">
+        <text class="item-txt">选项{{data1}}</text>
+        <div class="item-content">
+          <quist-switch checked="{{false}}" @on-change="callback1"></quist-switch>
+        </div>
+      </div>
+      <div class="item-box">
+        <text class="item-txt">选项 {{data3}} - 不可用</text>
+        <div class="item-content">
+          <quist-switch disabled checked="{{false}}"></quist-switch>
+        </div>
+      </div>
+      <div class="item-box">
+        <text class="item-txt">选项 {{data4}} - 不可用</text>
+        <div class="item-content">
+          <quist-switch disabled="{{true}}" checked></quist-switch>
+        </div>
+      </div>
+    </div>
+    <div class="demo-block">
+      <div class="item-box">
+        <label class="item-txt" target="isDefault">自定义样式开关</label>
+        <div class="item-content">
+          <quist-switch checked="{{false}}" @on-change="callback2" id='isDefault' checked-color="#87d068" inner-style="{{innerStyle}}" wrapper-style="{{wrapperStyle}}"></quist-switch>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style>
+  .switch-demo {
+    flex-direction: column;
+    background-color: #f5f5f5;
+  }
+
+  .demo-block {
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .item-box {
+    margin: 20px;
+    flex-direction: column;
+  }
+
+  .item-content {
+    padding: 20px 0 20px 0;
+  }
+
+  .item-txt {
+    color: #333333;
+    font-size: 32px;
+  }
+</style>
+
+<script>
+  export default {
+    data: {
+      data1: false,
+      data3: false,
+      data4: true,
+      wrapperStyle: {
+        borderRadius: 0,
+        paddingLeft: '4px',
+        paddingRight: '4px'
+      },
+      innerStyle: {
+        borderRadius: 0,
+        backgroundColor: '#ffffff',
+        width: '60px',
+        height: '54px',
+        marginTop: '4px'
+      }
+    },
+    onInit() {
+      this.$page.setTitleBar({ text: 'Switch' })
+    },
+    callback1(data) {
+      this.data1 = data.detail.checked
+    },
+    callback2(data) {
+      console.log('选择是：', data.detail.checked)
+    }
+  }
+</script>
