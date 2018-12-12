@@ -1,7 +1,2 @@
-node_modules
-.idea
-*.log
-.nuxt
-dist
-.nyc_output
-coverage
+node_modules/
+docs/.vuepress/dist/
