@@ -18,13 +18,13 @@
     "asyncdata",
     "fetch"
   ],
-  "homepage": "https://ezypeeze.github.io/nuxt-neo",
+  "homepage": "https://516310460.github.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ezypeeze/nuxt-neo"
+    "url": "https://github.com/516310460/516310460.github.io"
   },
   "bugs": {
-    "url": "https://github.com/ezypeeze/nuxt-neo/issues"
+    "url": "https://github.com/516310460/516310460.github.io/issues"
   },
   "main": "lib/module.js",
   "scripts": {

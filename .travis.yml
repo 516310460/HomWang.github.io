@@ -17,5 +17,5 @@ deploy:
     email: ${NPM_EMAIL_ADDRESS}
     skip_cleanup: true
     on:
-      repo: ezypeeze/nuxt-neo
+      repo: 516310460/516310460.github.io
       tags: true

@@ -10,11 +10,11 @@ npm run docs:build
 cd docs/.vuepress/dist
 
 git init
-git config user.name "Pedro Pereira"
-git config user.email "pedromdspereira.93@gmail.com"
+git config user.name "516310460"
+git config user.email "516310460@gmail.com"
 
 git add -A
 git commit -m 'Updated documentation'
-git push -f git@github.com:ezypeeze/nuxt-neo.git master:gh-pages
+git push -f git@github.com:516310460/516310460.github.io master:gh-pages
 
 cd -
