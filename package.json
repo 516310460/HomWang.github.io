@@ -1,0 +1,97 @@
+{
+  "name": "nuxt-neo",
+  "version": "2.0.2",
+  "description": "A nuxt.js module that implements a universal api layer, same-way compatible between server and client side.",
+  "keywords": [
+    "nuxt",
+    "vue",
+    "node",
+    "javascript",
+    "module",
+    "api",
+    "middleware",
+    "service",
+    "universal",
+    "neo",
+    "controller",
+    "action",
+    "asyncdata",
+    "fetch"
+  ],
+  "homepage": "https://ezypeeze.github.io/nuxt-neo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ezypeeze/nuxt-neo"
+  },
+  "bugs": {
+    "url": "https://github.com/ezypeeze/nuxt-neo/issues"
+  },
+  "main": "lib/module.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "ava",
+    "lint": "eslint --ext .js lib",
+    "release:patch": "sure && standard-version --no-verify --release-as patch && git push --tags",
+    "release:minor": "sure && standard-version --no-verify --release-as minor && git push --tags",
+    "release:major": "sure && standard-version --no-verify --release-as major && git push --tags"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "author": "Pedro Pereira <pedromdspereira.93@gmail.com>",
+  "contributors": [
+    {
+      "name": "Pedro Pereira <pedromdspereira.93@gmail.com>"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "config": "^1.30.0",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "axios": "^0.18.0",
+    "babel-eslint": "^8.2.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "browser-env": "^3.2.5",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-ava": "^4.5.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "jsdom": "^11.10.0",
+    "lodash": "^4.17.10",
+    "nuxt": "^1.4.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.12.1",
+    "querystring": "^0.2.0",
+    "require-extension-hooks": "^0.3.2",
+    "require-extension-hooks-babel": "^0.1.1",
+    "require-extension-hooks-vue": "^1.0.0",
+    "standard-version": "^4.3.0",
+    "sure": "^0.0.3",
+    "vuepress": "^0.8.4"
+  },
+  "ava": {
+    "require": [
+      "./tests/setup/babel.js",
+      "./tests/setup/global.js"
+    ],
+    "concurrency": 1
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}

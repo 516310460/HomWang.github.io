@@ -1,0 +1,7 @@
+node_modules
+.idea
+*.log
+.nuxt
+dist
+.nyc_output
+coverage
