@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/nuxt-neo/',
+    base: '/',
     locales: {
         '/': {
             lang: 'en-us',
@@ -8,7 +8,7 @@ module.exports = {
         }
     },
     themeConfig: {
-        repo: 'ezypeeze/nuxt-neo',
+        repo: '/',
         locales: {
             '/': {
                 nav: [
