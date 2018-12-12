@@ -1,15 +1,15 @@
-# nuxt-neo
+# 516310460.github.io
 [![Build Status](https://travis-ci.org/516310460/516310460.github.io.svg?branch=master)](https://travis-ci.org/516310460/516310460.github.io)
-[![Current NPM Version](https://badge.fury.io/js/nuxt-neo.svg)](https://badge.fury.io/js/nuxt-neo)
+[![Current NPM Version](https://badge.fury.io/js/516310460.github.io.svg)](https://badge.fury.io/js/516310460.github.io)
 [![Dependencies](https://david-dm.org/516310460/516310460.github.io.svg)](https://david-dm.org/516310460/516310460.github.io.svg)
 [![Codecov](https://codecov.io/gh/516310460/516310460.github.io/branch/master/graph/badge.svg)](https://codecov.io/gh/516310460/516310460.github.io)
-[![Monthly Downloads](https://img.shields.io/npm/dm/nuxt-neo.svg)](https://img.shields.io/npm/dm/nuxt-neo.svg)
+[![Monthly Downloads](https://img.shields.io/npm/dm/516310460.github.io.svg)](https://img.shields.io/npm/dm/516310460.github.io.svg)
 [![Known Vulnerabilities](https://snyk.io/test/github/516310460/516310460.github.io/badge.svg)](https://snyk.io/test/github/516310460/516310460.github.io)
 
 > This module allows you to make a middleware API between the browser, your server and other private API's. Opinated, yet flexible, you can take care of your data flow in the same way, no matter if you are executing code on server or client side.
 
 ### Documentation ###
-Check full documentation [here](https://516310460.github.io/nuxt-neo).
+Check full documentation [here](https://516310460.github.io/516310460.github.io).
 
 ### Description ###
 One of the things that Nuxt.js doesn't bring out-of-the-box is middleware api support

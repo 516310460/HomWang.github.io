@@ -5,7 +5,7 @@ It's possible to add middleware into 3 parts of your API:
 // file: nuxt.config.js
 {
   modules: [
-    ['nuxt-neo', {
+    ['516310460.github.io', {
       // ...
       middleware: [
         function (req) {
@@ -80,7 +80,7 @@ To do this, define the response middleware file into module config:
 // nuxt.config.js
 {
   modules: [
-    ['nuxt-neo', {
+    ['516310460.github.io', {
       // ...
       responseMiddleware: '~/response_middleware'
       // ...

@@ -28,7 +28,7 @@ Or in case you fetch a todo by id and it doesn't exist:
     }
 ```
 
-- By default, ```nuxt-neo``` globalizes what we call ```http errors/exceptions```. Those exceptions,
+- By default, ```516310460.github.io``` globalizes what we call ```http errors/exceptions```. Those exceptions,
 are a kind of error that is a request flow error (route not found, bad request payload, reserved/private areas).
 If an ```http errors/exceptions``` is throwed, a special kind of response will be sent 
 (e.g bad request will send a list of errors, not found will represent that a given id todo doesn't exist, ...).
@@ -38,7 +38,7 @@ nice-to-have way to organize your error handling. If you don't want this classes
 ```js
 {
   modules: [
-    ['nuxt-neo', {
+    ['516310460.github.io', {
        // ...
        httpErrors: false // disable http global error classes
        // ...

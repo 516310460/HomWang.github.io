@@ -1,13 +1,13 @@
 # Getting Started
 
 ```bash
-yarn add nuxt-neo --save
+yarn add 516310460.github.io --save
 ```
 
 Or NPM:
 
 ```bash
-npm i nuxt-neo --save
+npm i 516310460.github.io --save
 ```
 
 Then add the module to `nuxt.config.js`:
@@ -15,7 +15,7 @@ Then add the module to `nuxt.config.js`:
 ```js
 {
   modules: [
-    ['nuxt-neo', {
+    ['516310460.github.io', {
       // Options
     }]
   ]

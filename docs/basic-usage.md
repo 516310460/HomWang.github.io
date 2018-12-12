@@ -1,13 +1,13 @@
 # Basic Usage #
 
-After you installed ```nuxt-neo``` package and added there are some required options you must set.
+After you installed ```516310460.github.io``` package and added there are some required options you must set.
 
 ## Creating your API ##
 Create a new folder on your project, lets assume ```~/api```.
 ```js
 {
   modules: [
-    ['nuxt-neo', {
+    ['516310460.github.io', {
         directory: __dirname + '/api'
     }]
   ]
@@ -85,7 +85,7 @@ First you need to create your client-side http request handler:
 ```js
 {
   modules: [
-    ['nuxt-neo', {
+    ['516310460.github.io', {
         clientSideApiHandler: '~/api_handler' // since its client-side we can use alias resolver '~'
     }]
   ]

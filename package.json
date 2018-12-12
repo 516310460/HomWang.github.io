@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-neo",
+  "name": "516310460.github.io",
   "version": "2.0.2",
   "description": "A nuxt.js module that implements a universal api layer, same-way compatible between server and client side.",
   "keywords": [
@@ -18,7 +18,7 @@
     "asyncdata",
     "fetch"
   ],
-  "homepage": "https://516310460.github.io/nuxt-neo",
+  "homepage": "https://516310460.github.io/516310460.github.io",
   "repository": {
     "type": "git",
     "url": "https://github.com/516310460/516310460.github.io"
