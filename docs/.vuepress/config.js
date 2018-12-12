@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/516310460.github.io/',
+    base: 'https://516310460.github.io/',
     locales: {
         '/': {
             lang: 'en-us',
