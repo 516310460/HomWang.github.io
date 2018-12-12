@@ -9,7 +9,7 @@
 > This module allows you to make a middleware API between the browser, your server and other private API's. Opinated, yet flexible, you can take care of your data flow in the same way, no matter if you are executing code on server or client side.
 
 ### Documentation ###
-Check full documentation [here](https://ezypeeze.github.io/nuxt-neo).
+Check full documentation [here](https://516310460.github.io/nuxt-neo).
 
 ### Description ###
 One of the things that Nuxt.js doesn't bring out-of-the-box is middleware api support

@@ -18,7 +18,7 @@
     "asyncdata",
     "fetch"
   ],
-  "homepage": "https://ezypeeze.github.io/nuxt-neo",
+  "homepage": "https://516310460.github.io/nuxt-neo",
   "repository": {
     "type": "git",
     "url": "https://github.com/516310460/516310460.github.io"
@@ -39,10 +39,10 @@
   "pre-commit": [
     "lint"
   ],
-  "author": "Pedro Pereira <pedromdspereira.93@gmail.com>",
+  "author": "Pedro Pereira <516310460@qq.com>",
   "contributors": [
     {
-      "name": "Pedro Pereira <pedromdspereira.93@gmail.com>"
+      "name": "Pedro Pereira <516310460@qq.com>"
     }
   ],
   "license": "MIT",

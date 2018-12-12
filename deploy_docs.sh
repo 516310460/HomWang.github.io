@@ -11,7 +11,7 @@ cd docs/.vuepress/dist
 
 git init
 git config user.name "Pedro Pereira"
-git config user.email "pedromdspereira.93@gmail.com"
+git config user.email "516310460@qq.com"
 
 git add -A
 git commit -m 'Updated documentation'
