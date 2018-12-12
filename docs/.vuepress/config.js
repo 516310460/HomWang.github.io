@@ -8,7 +8,7 @@ module.exports = {
         }
     },
     themeConfig: {
-        repo: '516310460/516310460.github.io',
+        // repo: '516310460/516310460.github.io',
         locales: {
             '/': {
                 nav: [
