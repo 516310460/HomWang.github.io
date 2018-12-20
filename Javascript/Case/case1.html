@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>案例研究一(响应处理) | Hom Wang</title>
+    <meta name="description" content="Vue.js、Nuxt.js、Node.js、Flutter">
+    <link rel="icon" href="/img/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.5d3f4931.css" as="style"><link rel="preload" href="/assets/js/app.4f74d802.js" as="script"><link rel="preload" href="/assets/js/21.d1962134.js" as="script"><link rel="prefetch" href="/assets/js/10.56150da0.js"><link rel="prefetch" href="/assets/js/11.ff18f93e.js"><link rel="prefetch" href="/assets/js/12.8ccd9dad.js"><link rel="prefetch" href="/assets/js/13.45786c14.js"><link rel="prefetch" href="/assets/js/14.fa6a5ff9.js"><link rel="prefetch" href="/assets/js/15.b7ea1a52.js"><link rel="prefetch" href="/assets/js/16.36fc4390.js"><link rel="prefetch" href="/assets/js/17.dd1c270e.js"><link rel="prefetch" href="/assets/js/18.b6b7e8c6.js"><link rel="prefetch" href="/assets/js/19.e71ab80c.js"><link rel="prefetch" href="/assets/js/2.8864d7b9.js"><link rel="prefetch" href="/assets/js/20.1a5bd476.js"><link rel="prefetch" href="/assets/js/22.8b48918f.js"><link rel="prefetch" href="/assets/js/23.87368eee.js"><link rel="prefetch" href="/assets/js/24.0ac03f94.js"><link rel="prefetch" href="/assets/js/25.c6c72a9c.js"><link rel="prefetch" href="/assets/js/26.4fbd88d4.js"><link rel="prefetch" href="/assets/js/27.ba3a19fd.js"><link rel="prefetch" href="/assets/js/28.68afbc9c.js"><link rel="prefetch" href="/assets/js/29.a586f57e.js"><link rel="prefetch" href="/assets/js/3.bbdbddfb.js"><link rel="prefetch" href="/assets/js/30.2451e2b6.js"><link rel="prefetch" href="/assets/js/4.797a98ab.js"><link rel="prefetch" href="/assets/js/5.db239691.js"><link rel="prefetch" href="/assets/js/6.62101db5.js"><link rel="prefetch" href="/assets/js/7.81d72994.js"><link rel="prefetch" href="/assets/js/8.c60be1c1.js"><link rel="prefetch" href="/assets/js/9.a94ddf35.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5d3f4931.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Hom Wang</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/nuxt/introduction.html" class="nav-link">Nuxt.js</a></div><div class="nav-item"><a href="/Javascript/introduction.html" class="nav-link">Javascript</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/516310460" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/jakeWangHong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  码云
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/0cd8d9f167dc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nuxt.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/nuxt/introduction.html" class="nav-link">Nuxt.js</a></div><div class="nav-item"><a href="/Javascript/introduction.html" class="nav-link">Javascript</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/516310460" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/jakeWangHong" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  码云
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/0cd8d9f167dc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nuxt.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Javascript/introduction.html" class="sidebar-link">介绍</a></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>代码重构</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/Javascript/Case/case1.html" class="active sidebar-link">案例研究一(响应处理)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#初始化代码" class="sidebar-link">初始化代码</a></li><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#初始代码的问题" class="sidebar-link">初始代码的问题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#可读性低" class="sidebar-link">可读性低</a></li><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#难以维持" class="sidebar-link">难以维持</a></li><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#代码重复" class="sidebar-link">代码重复</a></li></ul></li><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#迭代" class="sidebar-link">迭代</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#第一次迭代-删除临时变量" class="sidebar-link">第一次迭代 - 删除临时变量</a></li><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#第二次迭代-反转保护if语句" class="sidebar-link">第二次迭代 - 反转保护if语句</a></li><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#第三次迭代-删除其他" class="sidebar-link">第三次迭代 - 删除其他</a></li><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#第四次迭代-处理逻辑中的重复" class="sidebar-link">第四次迭代 - 处理逻辑中的重复</a></li><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#第五次迭代-查找表" class="sidebar-link">第五次迭代 - 查找表</a></li><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#第六次迭代-无效状态" class="sidebar-link">第六次迭代 - 无效状态</a></li></ul></li><li class="sidebar-sub-header"><a href="/Javascript/Case/case1.html#结论" class="sidebar-link">结论</a></li></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="案例研究一-响应处理"><a href="#案例研究一-响应处理" aria-hidden="true" class="header-anchor">#</a> 案例研究一(响应处理)</h1> <p>看到过这个案例，我觉得非常的不错，在很多时候可能我们对代码的处理不太干净、复用、报错这些，在实际开发中或多或少都有一些瑕疵特此分享该<a href="https://blog.lichter.io/posts/refactoring-code-a-case-study-1-response-han" target="_blank" rel="noopener noreferrer">案例<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <h2 id="初始化代码"><a href="#初始化代码" aria-hidden="true" class="header-anchor">#</a> 初始化代码</h2> <p>代码如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">evaluateResponseOld</span> <span class="token operator">=</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> text <span class="token operator">=</span> <span class="token string">''</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Confirmation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        text <span class="token operator">=</span> <span class="token string">'This token has already been used'</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        text <span class="token operator">=</span> <span class="token string">'Thanks for your subscription'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Cancellation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        text <span class="token operator">=</span> <span class="token string">'This token has already been used'</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        text <span class="token operator">=</span> <span class="token string">'You have been unsubscribed successfully'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    text <span class="token operator">=</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> text
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="初始代码的问题"><a href="#初始代码的问题" aria-hidden="true" class="header-anchor">#</a> 初始代码的问题</h2> <h3 id="可读性低"><a href="#可读性低" aria-hidden="true" class="header-anchor">#</a> <code>可读性低</code></h3> <p>因此，正如您可能已经认识到的那样，代码不必要地复杂，因此具有很高的可读性。你总是要记住满足了哪个条件。此外，text变量是可变的，因此您还必须考虑其状态。在这种情况下，它只会设置一次，但想象一下更复杂的功能。</p> <h3 id="难以维持"><a href="#难以维持" aria-hidden="true" class="header-anchor">#</a> <code>难以维持</code></h3> <p>现在想象一下，必须处理一个额外的状态，因为API现在会响应另一个场景（例如Cancellation，Confirmation和Pending）。添加状态需要一些时间，而且你必须复制大量代码（参见response.used当前代码）。这导致我......</p> <h3 id="代码重复"><a href="#代码重复" aria-hidden="true" class="header-anchor">#</a> <code>代码重复</code></h3> <p>代码重复本身优于错误的抽象，但在这种情况下代码不必要地重复，因此更容易出错。想想你必须改变used到invalid现在。如果您错过了一个if语句，代码将无效。幸运的是，你的测试会告诉你（如果你有这样的......）。</p> <h2 id="迭代"><a href="#迭代" aria-hidden="true" class="header-anchor">#</a> 迭代</h2> <p>那么......我们怎么能做得更好？我们将研究一些用于在清晰可读的代码段中转换此代码的技术。它只需要六次小迭代！</p> <h3 id="第一次迭代-删除临时变量"><a href="#第一次迭代-删除临时变量" aria-hidden="true" class="header-anchor">#</a> 第一次迭代 - 删除临时变量</h3> <h4 id="动机"><a href="#动机" aria-hidden="true" class="header-anchor">#</a> 动机</h4> <p>那么，我们为什么要从代码中删除临时变量（尽可能）？嗯，首先，它增加了可读性。当几乎所有变量都是不可变的（或者不存在变量）时，您不必考虑它们的状态！在我们的场景中，我们甚至可以完全省略text变量，因为函数将始终返回文本，并且不包括任何副作用。</p> <p>代码如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">stepOne</span> <span class="token operator">=</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Confirmation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'Thanks for your subscription'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Cancellation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'You have been unsubscribed successfully'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="第二次迭代-反转保护if语句"><a href="#第二次迭代-反转保护if语句" aria-hidden="true" class="header-anchor">#</a> 第二次迭代 - 反转保护if语句</h3> <h4 id="动机-2"><a href="#动机-2" aria-hidden="true" class="header-anchor">#</a> 动机</h4> <p>保护if，因为名称可能暗示if更大的子块周围的条件。它们使用它们的条件来保护代码，这样它只会在if求值为true 时执行。一般来说没有坏事，但嵌套防护会导致可读性低和不必要的复杂性。相反，我们可以反转条件并插入早期返回。</p> <p>代码如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">stepOne</span> <span class="token operator">=</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Confirmation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'Thanks for your subscription'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Cancellation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'You have been unsubscribed successfully'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="第三次迭代-删除其他"><a href="#第三次迭代-删除其他" aria-hidden="true" class="header-anchor">#</a> 第三次迭代 - 删除其他</h3> <h4 id="动机-3"><a href="#动机-3" aria-hidden="true" class="header-anchor">#</a> 动机</h4> <p>好吧，这可能有点争议，但我通常认为else是代码可读性低。如果您使用早期返回并在每个嵌套块中返回，它们将不会给您任何值。但是，有些情况下else完全没问题。</p> <p>通常我也会把它们进行拆分开提高可读性，但是为了让下一个迭代更加明显，我们将保持它们以表明条件是相互关联的。</p> <p>代码如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">stepThree</span> <span class="token operator">=</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Confirmation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token string">'Thanks for your subscription'</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Cancellation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token string">'You have been unsubscribed successfully'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="第四次迭代-处理逻辑中的重复"><a href="#第四次迭代-处理逻辑中的重复" aria-hidden="true" class="header-anchor">#</a> 第四次迭代 - 处理逻辑中的重复</h3> <h4 id="动机-4"><a href="#动机-4" aria-hidden="true" class="header-anchor">#</a> 动机</h4> <p>现在我们应该关注&quot;代码沉余&quot;。由于代码更具可读性，我们可以查看并在代码分支中找到可能的重复项。</p> <p>如果我们查看我们的转换代码，我们现在可以清楚地看到<code>response.used</code>条件独立于<code>response.type</code>。这意味着我们可以提取这个部分并向上移动一个范围，这使得条件成为另一个反向保护if。</p> <p>代码如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">stepFour</span> <span class="token operator">=</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Confirmation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Thanks for your subscription'</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Cancellation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'You have been unsubscribed successfully'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="第五次迭代-查找表"><a href="#第五次迭代-查找表" aria-hidden="true" class="header-anchor">#</a> 第五次迭代 - 查找表</h3> <h4 id="动机-5"><a href="#动机-5" aria-hidden="true" class="header-anchor">#</a> 动机</h4> <p>一个标准是我们应该能够轻松添加新的响应状态。为此，我们应该尽量减少我们需要的代码。目前，我们必须添加另一个if，另一个比较和一个return语句。似乎没那么多，但再次考虑更复杂的功能。</p> <p>为了减少添加type（f.ex. Pending）和应该返回的文本时的更改，我们将控制流从if-else-if结构转换为查找表。如果您在条件中一次又一次地使用相同的比较方法（在我们的例子中为三等），这种方法很有效。</p> <p>我们将创建一个lookup对象并用响应类型填充它，这些响应类型将作为键，并将相应的文本作为值填充，以便我们可以根据响应类型动态访问文本。要添加新类型/状态，我们只需要添加真正改变的内容：新类型和相关文本。</p> <p>代码如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">stepFive</span> <span class="token operator">=</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> responseLookup <span class="token operator">=</span> <span class="token punctuation">{</span>
+    Confirmation<span class="token punctuation">:</span> <span class="token string">'Thanks for your subscription'</span><span class="token punctuation">,</span>
+    Cancellation<span class="token punctuation">:</span> <span class="token string">'You have been unsubscribed successfully'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>responseLookup<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> responseLookup<span class="token punctuation">[</span>response<span class="token punctuation">.</span>type<span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>您还可以使用Map来提高查找速度</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">stepFiveWithMap</span> <span class="token operator">=</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> responseMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token string">'Confirmation'</span><span class="token punctuation">,</span><span class="token string">'Thanks for your subscription'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'Cancellation'</span><span class="token punctuation">,</span><span class="token string">'You have been unsubscribed successfully'</span><span class="token punctuation">]</span>
+  <span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>responseMap<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> responseMap<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>type<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>只要查找对象不通过该函数进行更改，将查找对象置于外部也是可行的。这使得你的函数不纯，因为它将依赖于外部对象而不仅仅取决于它的输入。</p> <p>要解决这个问题，您可以同时使用两个参数（response和lookupObject），或者创建一个更高阶的函数，取lookupMap第一个，这将使您的函数可以轻松重用。一个高阶函数是再次返回功能的功能。实现看起来像这样：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> responseMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token string">'Confirmation'</span><span class="token punctuation">,</span> <span class="token string">'Thanks for your subscription'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token string">'Cancellation'</span><span class="token punctuation">,</span> <span class="token string">'You have been unsubscribed successfully'</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">higherOrderStepFiveWithMap</span> <span class="token operator">=</span> lookupMap <span class="token operator">=&gt;</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>lookupMap<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> lookupMap<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>type<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> stepFiveWithMap <span class="token operator">=</span> <span class="token function">higherOrderStepFiveWithMap</span><span class="token punctuation">(</span>responseMap<span class="token punctuation">)</span>
+
+<span class="token comment">// Now use stepFiveWithMap(yourResponseObject)</span>
+</code></pre></div><p>虽然我更喜欢这个版本，因为它具有可重用性，纯度和低耦合性，让我们坚持使用简单而不纯的Map版本：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> lookupMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token string">'Confirmation'</span><span class="token punctuation">,</span> <span class="token string">'Thanks for your subscription'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token string">'Cancellation'</span><span class="token punctuation">,</span> <span class="token string">'You have been unsubscribed successfully'</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">simpleAndImpureStepFiveWithMap</span> <span class="token operator">=</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>lookupMap<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> lookupMap<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>type<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="第六次迭代-无效状态"><a href="#第六次迭代-无效状态" aria-hidden="true" class="header-anchor">#</a> 第六次迭代 - 无效状态</h3> <h4 id="动机-6"><a href="#动机-6" aria-hidden="true" class="header-anchor">#</a> 动机</h4> <p>好的！代码看起来可读，没有重复，易于维护。但有一点缺失：处理无效状态。即使你认为这种情况永远不会发生，如果发生错误也不会造成错误。在最好的情况下，您的监控/报告工具会将其提取并告诉您。为无效状态编写测试也是值得的，特别是在用户输入方面！</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> lookupMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token string">'Confirmation'</span><span class="token punctuation">,</span> <span class="token string">'Thanks for your subscription'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token string">'Cancellation'</span><span class="token punctuation">,</span> <span class="token string">'You have been unsubscribed successfully'</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">simpleAndImpureStepFiveWithMap</span> <span class="token operator">=</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>lookupMap<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> lookupMap<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>type<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'Invalid state while evaluating response'</span><span class="token punctuation">)</span>
+
+  <span class="token comment">/*
+    we could also 'shorten' that a little with short-circuit:
+
+    const invalid = () =&gt; { throw new Error('Invalid state while evaluating response') }
+
+    return lookupMap.get(response.type) || invalid()
+  */</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="结论"><a href="#结论" aria-hidden="true" class="header-anchor">#</a> 结论</h2> <p>初始代码:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">evaluateResponseOld</span> <span class="token operator">=</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> text <span class="token operator">=</span> <span class="token string">''</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Confirmation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        text <span class="token operator">=</span> <span class="token string">'This token has already been used'</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        text <span class="token operator">=</span> <span class="token string">'Thanks for your subscription'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Cancellation'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        text <span class="token operator">=</span> <span class="token string">'This token has already been used'</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        text <span class="token operator">=</span> <span class="token string">'You have been unsubscribed successfully'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    text <span class="token operator">=</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> text
+<span class="token punctuation">}</span>
+</code></pre></div><p>代码重构:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> lookupMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token string">'Confirmation'</span><span class="token punctuation">,</span> <span class="token string">'Thanks for your subscription'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token string">'Cancellation'</span><span class="token punctuation">,</span> <span class="token string">'You have been unsubscribed successfully'</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">simpleAndImpureStepFiveWithMap</span> <span class="token operator">=</span> response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>valid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'The provided code is invalid'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>used<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'This token has already been used'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>lookupMap<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> lookupMap<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>type<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'Invalid state while evaluating response'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>简而言之使用的技术：</p> <p>1、删除临时变量并尝试尽可能避免共享状态
+2、反转保护if并使用早期抛出来提高代码可读性和减少复杂性/深度
+3、尽可能减少else并把它剔出来，请删除其他
+4、查找并处理剩余逻辑中的重复代码
+5、尽可能使用查找表/查找对象
+6、正确处理无效状态</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/Javascript/introduction.html" class="prev">
+          介绍
+        </a></span> <!----></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.4f74d802.js" defer></script><script src="/assets/js/21.d1962134.js" defer></script>
+  </body>
+</html>
